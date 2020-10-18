@@ -24,7 +24,7 @@
 
 <main>
 
-    <h1 class="h1Main">Урок 1</h1>
+    <h1 class="h1Main">Урок 2</h1>
 
 </main>
 
