@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="lessons2.css">
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -22,9 +24,50 @@
 
 </header>
 
+
 <main>
 
     <h1 class="h1Main">Урок 1</h1>
+
+    <table class="tableMain" border="5">
+
+        <caption>Таблица умножения</caption>
+
+        <?php
+        for ($tr=0; $tr<2; $tr++):
+            $column = ($tr == 0) ? 1 : 6;
+            $condition = ($tr == 0) ? 6 : 11;
+        ?>
+
+        <tr>
+
+            <?php
+            for ($i = $column; $i<$condition; $i++):
+            ?>
+
+            <td class="td">
+
+            <?php
+                for ($j=1; $j<11; $j++) {
+
+                    echo $i . " x " . $j . " = " . $i * $j . "<br>";
+
+                }
+            ?>
+
+            </td>
+
+            <?php
+            endfor;
+            ?>
+
+        </tr>
+
+        <?php
+        endfor;
+        ?>
+
+    </table>
 
 </main>
 

@@ -1,0 +1,13 @@
+caption{
+    padding-bottom: 5px;
+}
+
+.tableMain{
+    text-align: left;
+    margin: auto auto 10px;
+}
+
+.td{
+    width: 100px;
+    padding: 5px;
+}

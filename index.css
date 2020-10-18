@@ -27,6 +27,7 @@ main{
 
 .h1Main, .pFooterMain{
     text-align: center;
+    margin: 10px;
 }
 
 .menu{
