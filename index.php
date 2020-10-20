@@ -15,8 +15,8 @@
         <nav>
             <ul class="menu">
                 <li><a href="index.php">NIX</a></li>
-                <li><a href="lessons1.php">Урок 1</a></li>
-                <li><a href="lessons2.php">Урок 2</a></li>
+                <li><a href="lessons1.php?valueKey=lessons1"">Урок 1</a></li>
+                <li><a href="lessons2.php?valueKey=lessons2">Урок 2</a></li>
             </ul>
         </nav>
 
@@ -25,11 +25,7 @@
 
     <main>
 
-        <?php
-        include "includeNIX.php";
-        ?>
-
-        <h1 class="h1Main"><?php echo "$hello"; ?></h1>
+        <h1 class="h1Main"><?php echo "Hello, NIX Education"; ?></h1>
 
      </main>
 

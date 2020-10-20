@@ -34,14 +34,14 @@
         <caption>Таблица умножения</caption>
 
         <?php
-//         make table strings
+        /** Make table strings **/
         for ($tr=0; $tr<2; $tr++):
             $column = ($tr == 0) ? 1 : 6;
             $condition = ($tr == 0) ? 6 : 11;
         ?>
 
         <tr>
-<!--             make socket in column  -->
+            <!-- Make socket in column  -->
             <?php
             for ($i = $column; $i<$condition; $i++):
             ?>
@@ -49,7 +49,7 @@
             <td class="td">
 
             <?php
-//                 fill the socket
+                /** Fill the socket **/
                 for ($j=1; $j<11; $j++) {
 
                     $result = $i * $j;
