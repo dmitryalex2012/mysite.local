@@ -26,7 +26,36 @@
 
     <main>
 
-        <!--    File "index.php" is used as layout.
+
+        <?php
+
+        $user = 'sitemanufactura';
+        $pass = '200384';
+
+        try {
+            $dbh = new PDO('mysql:host=localhost;dbname=trainweb', $user, $pass);
+//            foreach($dbh->query('SELECT * from FOO') as $row) {
+//                print_r($row);
+//            }
+
+//            echo "ok" . "<br>";
+            $query = "SELECT * FROM `test1`";
+            $res = query($query);
+
+            $dbh = null;
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            die();
+        }
+
+//    'class' => 'yii\db\Connection',
+//    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+
+
+        ?>
+
+
+        <!--    File "index.php" using as layout.
                 The pages are loaded depends of "valueKey" value in NAV menu.
         -->
         <?php
