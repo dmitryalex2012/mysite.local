@@ -34,13 +34,24 @@
 
         try {
             $dbh = new PDO('mysql:host=localhost;dbname=trainweb', $user, $pass);
-//            foreach($dbh->query('SELECT * from FOO') as $row) {
+
+//            $query = "SELECT * FROM `test1`";
+//            foreach($dbh->query('SELECT * FROM `test1`') as $row) {
+//                echo "<pre>";
 //                print_r($row);
+//                echo "</pre>";
+//                print $row['id'] . "\r\n" . "<br>";
+//                print $row['title'] . "\r\n";
+//                print $row['content'] . "\n";
+//                print $row['note'] . "\n";
 //            }
 
-//            echo "ok" . "<br>";
-            $query = "SELECT * FROM `test1`";
-            $res = query($query);
+
+            $rez =$dbh->query('SELECT * FROM `test1`');
+                echo "<pre>";
+                print_r($rez);
+                echo "</pre>";
+
 
             $dbh = null;
         } catch (PDOException $e) {
