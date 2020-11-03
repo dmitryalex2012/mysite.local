@@ -35,22 +35,29 @@
         try {
             $dbh = new PDO('mysql:host=localhost;dbname=trainweb', $user, $pass);
 
-//            $query = "SELECT * FROM `test1`";
-//            foreach($dbh->query('SELECT * FROM `test1`') as $row) {
-//                echo "<pre>";
-//                print_r($row);
-//                echo "</pre>";
-//                print $row['id'] . "\r\n" . "<br>";
+            $query = "SELECT * FROM `test1`";
+            foreach($dbh->query($query) as $row) {
+                echo "<pre>";
+                print_r($row);
+                echo "</pre>";
+
+//                print $row['id'] . "\r\n";
 //                print $row['title'] . "\r\n";
 //                print $row['content'] . "\n";
 //                print $row['note'] . "\n";
-//            }
+                echo  "<br>";
+            }
 
-
-            $rez =$dbh->query('SELECT * FROM `test1`');
+            $query = 'SELECT * FROM `test1`';
+//            $query = "SELECT * FROM `test1` WHERE id = '1'";
+            $result = $dbh->query($query);
+            foreach ($result as $row){
                 echo "<pre>";
-                print_r($rez);
+//                print_r($row);
+                print_r($row['id']);
                 echo "</pre>";
+            }
+
 
 
             $dbh = null;
