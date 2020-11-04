@@ -1,3 +1,18 @@
+<?php
+
+//session_name('abc');
+session_start();
+
+
+        $_SESSION['time'] = date("H:i:s");
+
+//echo session_save_path();
+
+//        session_destroy();
+
+?>
+
+
 <html lang="en">
 
  <head>
@@ -27,48 +42,63 @@
     <main>
 
 
-        <?php
+<!--        --><?php
+//
+//        $user = 'sitemanufactura';
+//        $pass = '200384';
+//
+//        try {
+//            $dbh = new PDO('mysql:host=localhost;dbname=trainweb', $user, $pass);
+//
+//            $query = "SELECT * FROM `test1`";
+//            foreach($dbh->query($query) as $row) {
 
-        $user = 'sitemanufactura';
-        $pass = '200384';
-
-        try {
-            $dbh = new PDO('mysql:host=localhost;dbname=trainweb', $user, $pass);
-
-            $query = "SELECT * FROM `test1`";
-            foreach($dbh->query($query) as $row) {
-                echo "<pre>";
-                print_r($row);
-                echo "</pre>";
+//                echo "<pre>";
+//                print_r($row);
+//                echo "</pre>";
 
 //                print $row['id'] . "\r\n";
 //                print $row['title'] . "\r\n";
 //                print $row['content'] . "\n";
 //                print $row['note'] . "\n";
-                echo  "<br>";
-            }
+//                echo  "<br>";
+//            }
 
-            $query = 'SELECT * FROM `test1`';
+//            $query = 'SELECT * FROM `test1`';
+
 //            $query = "SELECT * FROM `test1` WHERE id = '1'";
-            $result = $dbh->query($query);
-            foreach ($result as $row){
-                echo "<pre>";
-//                print_r($row);
-                print_r($row['id']);
-                echo "</pre>";
-            }
+
+//            $result = $dbh->query($query);
+//            foreach ($result as $row){
+//                echo "<pre>";
+//                print_r($row['id']);
+//                echo "</pre>";
+//            }
+
+//            $dbh = null;
+//        } catch (PDOException $e) {
+//            print "Error!: " . $e->getMessage() . "<br/>";
+//            die();
+//        }
+//        ?>
+
+        <?php
 
 
+        echo $_SESSION['time'] . "<br>";
+        var_dump($_SESSION);
+        echo  "<br>";
 
-            $dbh = null;
-        } catch (PDOException $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            die();
-        }
+        echo session_name() . "<br>";
+        echo session_id() . "<br>";
 
-//    'class' => 'yii\db\Connection',
-//    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+//        var_dump(session_get_cookie_params());
+//        echo  "<br>";
+//        $cookie = session_get_cookie_params();
+//        var_dump($cookie['path']);
+//        echo  "<br>";
 
+//        echo session_save_path();
 
         ?>
 
@@ -101,3 +131,9 @@
  </body>
 
 </html>
+
+<?php
+
+//        session_destroy();
+
+?>
