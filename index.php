@@ -1,14 +1,10 @@
 <?php
 
-//session_name('abc');
+session_name("Dmitry");
+//session_id("rpbrdoejjbs78tkj97ob95vu946dmsr4");
 session_start();
 
-
         $_SESSION['time'] = date("H:i:s");
-
-//echo session_save_path();
-
-//        session_destroy();
 
 ?>
 
@@ -82,25 +78,51 @@ session_start();
 //        }
 //        ?>
 
-        <?php
+<!--        --><?php
 
-
-        echo $_SESSION['time'] . "<br>";
-        var_dump($_SESSION);
-        echo  "<br>";
-
-        echo session_name() . "<br>";
-        echo session_id() . "<br>";
-
+//        echo $_SESSION['time'] . "<br>";
+//        var_dump($_SESSION);
+//        echo  "<br>";
+//        echo  "<br>";
+//
+//        echo session_id() . "<br>";
+//        echo session_name() . "<br>";
+//        echo "rpbrdoejjbs78tkj97ob95vu946dmsr3" . "<br>";
+//        echo session_save_path() . "<br>";
+//        echo  "<br>";
+//
+//        if (isset($_SESSION['time'])){
+//            echo $_SESSION['time'];
+//        } else{
+//            echo 'No $_SESSION[\'time\']';
+//        }
+//        echo  "<br>";
+//
+//        if (empty($_SESSION['count'])) {
+//            $_SESSION['count'] = 1;
+//        } else {
+//            $_SESSION['count']++;
+//        }
+//        $count = $_SESSION['count'];
+//        echo '<p>';
+//        echo "Здравствуйте, посетитель, вы видели эту страницу $count раз.";
+//        echo '</p>';
+//        echo  "<br>";
+//
+//
 //        var_dump(session_get_cookie_params());
 //        echo  "<br>";
 //        $cookie = session_get_cookie_params();
 //        var_dump($cookie['path']);
 //        echo  "<br>";
-
-//        echo session_save_path();
-
-        ?>
+//
+//
+//        $myFile = file("temp.txt");
+//        var_dump($myFile);
+//        echo  "<br>";
+//
+//        echo $_COOKIE["TestCookie"] . "<br>";
+//        ?>
 
 
         <!--    File "index.php" using as layout.
