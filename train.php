@@ -38,5 +38,5 @@ if ($_POST) {
     echo $_COOKIE["TestCookie"] . "<br>" . $value . "<br>";
 
     // В целях тестирования и отладки может пригодиться вывод всех cookie
-    print_r($_COOKIE);
+//    print_r($_COOKIE);
     ?>
