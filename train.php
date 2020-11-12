@@ -116,6 +116,70 @@ $someOtherObj->tempA;
         <!--    </form>-->
 
 
+<?php
+$hostname = 'localhost';
+$dbname = 'trainweb';
+$user = 'sitemanufactura';
+$pass = '200384';
+
+$connection = new mysqli($hostname, $user, $pass, $dbname);
+
+if ($connection->connect_error) {
+    die("Ошибка подключения: " . $connection->connect_error);
+} else{
+    echo "connected" . "<br>";
+}
+
+//$sql = "CREATE TABLE instructorNew (
+//          ID CHAR(5),
+//          name VARCHAR(20) NOT NULL,
+//          dept_name VARCHAR(20),
+//          salary NUMERIC(8,2),
+//          PRIMARY KEY (ID)
+//)";
+
+//$sql = "DROP TABLE instructorNew";
+
+//if ($connection->query($sql) === TRUE) {
+//    echo "Таблица instructorNew создана успешно";
+//} else {
+//    echo "Ошибка создания таблицы: " . $connection->error;
+//}
+
+
+//$sql = "SELECT title FROM test1";
+//$query = $connection->query($sql);
+//if ($query->num_rows > 0) {
+//    while($row = $query->fetch_assoc()) {
+//        echo "id:" . $row["title"] . "<br>";
+//    }
+//} else {
+//    echo "0 результат";
+//}
+
+
+//$sql = "INSERT INTO test1 (title, content, note)
+//        VALUES ('train4', 'Ivanov', 'ser@foo.ag');";
+//
+//if ($connection->query($sql) === TRUE) {
+//    echo "Успешно созданы новые записи";
+//} else {
+//    echo "Ошибка: " . $sql . "<br>" . $connection->error;
+//}
+
+$line = 3;
+$sql = "DELETE FROM test1 WHERE id = $line";
+
+if ($connection->query($sql) === TRUE) {
+    echo "Успешно удалена id = $line";
+} else {
+    echo "Ошибка: " . $sql . "<br>" . $connection->error;
+}
+
+$connection->close();
+?>
+
+
     <?php
 //    echo $_COOKIE["TestCookie"] . "<br>" . $value . "<br>";
 //
