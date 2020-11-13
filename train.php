@@ -139,7 +139,6 @@ if ($connection->connect_error) {
 //)";
 
 //$sql = "DROP TABLE instructorNew";
-
 //if ($connection->query($sql) === TRUE) {
 //    echo "Таблица instructorNew создана успешно";
 //} else {

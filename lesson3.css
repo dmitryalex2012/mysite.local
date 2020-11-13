@@ -1,0 +1,18 @@
+.inputForm{
+    margin-top: 30px;
+}
+
+.inputString{
+    text-align: center;
+    width: 300px;
+}
+
+.inputLabel, .inputButton{
+    display: flex;
+    justify-content: center;
+}
+
+.inputButton{
+    margin-top: 10px;
+}
+

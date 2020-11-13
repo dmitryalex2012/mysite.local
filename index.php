@@ -1,13 +1,14 @@
 
-
 <html lang="en">
 
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Train WEB page</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="lessons1.css">
-  <link rel="stylesheet" href="lessons2.css">
+  <link rel="stylesheet" href="lesson1.css">
+  <link rel="stylesheet" href="lesson2.css">
+  <link rel="stylesheet" href="lesson3.css">
+  <link rel="stylesheet" href="lesson3Form.css">
  </head>
 
  <body>
@@ -29,22 +30,26 @@
     <main>
 
 
-
-
-
         <!--    File "index.php" using as layout.
                 The pages are loaded depends of "valueKey" value in NAV menu.
         -->
         <?php
-        if (isset($_GET['valueKey'])){
+        if (isset($_POST['inputData'])){
+
+            include "lesson3Form.php";
+
+        } elseif (isset($_GET['valueKey'])){
+
             switch ($_GET['valueKey']){
-                case "lessons1": include "lessons1.php"; break;
-                case "lessons2": include "lessons2.php"; break;
-                case "lessons3": include "lessons3.php"; break;
+                case "lessons1": include "lesson1.php"; break;
+                case "lessons2": include "lesson2.php"; break;
+                case "lessons3": include "lesson3.php"; break;
+
             }
-        }
-        else{
+        } else{
+
             include "hello.php";
+
         }
         ?>
 
@@ -60,9 +65,3 @@
  </body>
 
 </html>
-
-<?php
-
-//        session_destroy();
-
-?>
