@@ -1,13 +1,14 @@
+.outForm{
+    margin-top: 30px;
+}
 
-.buttonLessons3Form{
-    display: flex;
-    justify-content: center;
+.outButton{
     margin-top: 10px;
 }
 
-.convertedString{
-    text-align: center;
-    margin-top: 30px;
+.displayString, .outButton{
+        display: flex;
+        justify-content: center;
 }
 
 

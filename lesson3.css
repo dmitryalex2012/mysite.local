@@ -12,6 +12,10 @@
     justify-content: center;
 }
 
+.inputString{
+    height: 25px;
+}
+
 .inputButton{
     margin-top: 10px;
 }

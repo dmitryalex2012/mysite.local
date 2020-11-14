@@ -38,6 +38,10 @@
 
             include "lesson3Form.php";
 
+        } elseif (isset($_POST['displayed'])){
+
+            include "lesson3.php";
+
         } elseif (isset($_GET['valueKey'])){
 
             switch ($_GET['valueKey']){
