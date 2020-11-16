@@ -130,20 +130,49 @@ if ($connection->connect_error) {
     echo "connected" . "<br>";
 }
 
-//$sql = "CREATE TABLE instructorNew (
+
+$sql = "SELECT
+            test1.id as test_id, test1.title as test_title,
+            test2.note as test2_note
+        FROM test1
+        LEFT OUTER JOIN test2 ON test1.id=test2.id";
+
+$results = $connection->query($sql);
+foreach ($results as $result){
+    echo "<pre>";
+    print_r($result);
+    echo "</pre>";
+}
+
+
+
+
+//$sql = "CREATE TABLE test2 (
 //          ID CHAR(5),
-//          name VARCHAR(20) NOT NULL,
-//          dept_name VARCHAR(20),
-//          salary NUMERIC(8,2),
+//          title VARCHAR(200) NOT NULL,
+//          content VARCHAR(200),
+//          note NUMERIC(8,2),
 //          PRIMARY KEY (ID)
 //)";
 
-//$sql = "DROP TABLE instructorNew";
+        //$sql = "DROP TABLE instructorNew";
 //if ($connection->query($sql) === TRUE) {
-//    echo "Таблица instructorNew создана успешно";
+//    echo "Таблица instructorNew создана успешно" . "<br>";
 //} else {
 //    echo "Ошибка создания таблицы: " . $connection->error;
 //}
+
+
+
+//$sql = "INSERT INTO test2 (title, content, note)
+//        VALUES ('train12', 'Ivanov2', 5);";
+//
+//if ($connection->query($sql) === TRUE) {
+//    echo "Успешно созданы новые записи" . "<br>";
+//} else {
+//    echo "Ошибка: " . $sql . "<br>" . $connection->error;
+//}
+
 
 
 //$sql = "SELECT title FROM test1";
@@ -157,26 +186,18 @@ if ($connection->connect_error) {
 //}
 
 
-//$sql = "INSERT INTO test1 (title, content, note)
-//        VALUES ('train4', 'Ivanov', 'ser@foo.ag');";
+
+//$line = 3;
+//$sql = "DELETE FROM test1 WHERE id = $line";
 //
 //if ($connection->query($sql) === TRUE) {
-//    echo "Успешно созданы новые записи";
+//    echo "Успешно удалена id = $line";
 //} else {
 //    echo "Ошибка: " . $sql . "<br>" . $connection->error;
 //}
-
-$line = 3;
-$sql = "DELETE FROM test1 WHERE id = $line";
-
-if ($connection->query($sql) === TRUE) {
-    echo "Успешно удалена id = $line";
-} else {
-    echo "Ошибка: " . $sql . "<br>" . $connection->error;
-}
-
-$connection->close();
-?>
+//
+//$connection->close();
+//?>
 
 
     <?php
@@ -217,7 +238,6 @@ $connection->close();
 //            }
 
 //            $query = 'SELECT * FROM `test1`';
-
 //            $query = "SELECT * FROM `test1` WHERE id = '1'";
 
 //            $result = $dbh->query($query);
@@ -279,3 +299,7 @@ $connection->close();
 //
 //        echo $_COOKIE["TestCookie"] . "<br>";
 //        ?>
+
+<?php
+$connection->close();
+?>
